@@ -1,7 +1,18 @@
 import { InferGetStaticPropsType } from "next";
+import React from "react";
 import { fetchAssignments, fetchClasses, fetchUpcomings } from "../api";
-import ContentArea from "../components/ContentArea";
+import ContentBody from "../components/ContentBody";
+import ContentHeader from "../components/ContentHeader";
 import SideBar from "../components/SideBar";
+
+function ContentArea({ data }: any) {
+  return (
+    <div className="flex-grow bg-gray-800">
+      <ContentHeader></ContentHeader>
+      <ContentBody data={data}></ContentBody>
+    </div>
+  );
+}
 
 function Layout({ data }: any) {
   return (
