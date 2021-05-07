@@ -1,8 +1,9 @@
 html,
 body {
+  height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Jost, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -13,4 +14,88 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  background: rgba(29, 31, 34, 0.95);
+  color: white;
+	display: table;
+  min-height: 1531px;
+}
+
+#side-bar {
+  width: 30%;
+  display: table-cell;
+	vertical-align: top;
+  background: #1D1F22;
+  padding: 20px;
+}
+
+#content-area {
+  width: 70%;
+  display: table-cell;
+	vertical-align: top;
+  padding: 20px;
+}
+
+#avatar-container {
+  display: grid;
+  grid-template-areas:
+  "avatar-image avatar-user-link";
+  border-bottom: 0.5px solid #393E43;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+#avatar-user-link {
+  grid-area: "avatar-user-link";
+  display: grid;
+  grid-template-areas:
+  "avatar-user"
+  "avatar-link";
+  margin-left: 10px;
+}
+
+#avatar-image {
+  grid-area: "avatar-image";
+}
+
+#avatar-user {
+  grid-area: "avatar-user";
+  font-size: 24px;
+}
+
+#avatar-link {
+  grid-area: "avatar-link";
+  height: 20px;
+  left: 0%;
+  right: 24.21%;
+  top: calc(50% - 20px/2 + 11.13px);
+  font-family: Jost;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 20px;
+  color: #32A2FF;
+}
+
+#avatar-link > a {
+  margin-right: 10px;
+}
+
+#profile-card {
+  height: 40px;
+  display: table;
+  align-items: center;
+}
+
+#profile-medal, #profile-score {
+  display: table-cell;
+  padding: 10px;
+}
+
+#profile-medal {
+  margin-top: 1000px;
 }
